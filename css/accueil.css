@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
+:root {
+    --primary: #28180A;
+    --background: #191919;
+    --slider: rgba(252, 191, 80, 0.877);
+    --navbar-height: 80px;
+}
+
+/* Body */
+
+body {
+    margin-top: var(--navbar-height);
+    background-color: #fdf2e9;
+}
+
+body #CoeurCite, #title {
+    color: white;
+}
+
+/* Boutons */
+
+button {
+    display: inline-block;
+    background-color: #7E603B;
+    border-radius: 20px;
+    color: white;
+    width: 200px;
+    border: 2px solid white;
+    position: relative;
+    font-weight: 2;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-family: "Krona One", sans-serif;
+}
+
+button:hover {
+    transition: 0.3s;
+    background-color: #28180A;
+}
+
+
+/* Section "Titre" / Présentation */
+
+#title {
+    background-image: url('../assets/Img_Accueil/Title.png');
+    background-size: cover;
+    display: block;
+    padding: 10%;
+    height: 50%;
+}
+
+#title button {
+    margin-top: 20px;
+}
+
+#title p {
+    font-size: 2.5vw;
+    font-family: "Krona One", sans-serif;
+}
+
+/* Section Carrousel */
+#carrousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#carrousel #title-map p {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 2.5vw;
+    font-weight: 400;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.custom-slider { 
+    display: none;
+}
+
+.slide-container {
+    width: 70%;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    background: linear-gradient(to right, #b18958, #7e603b);
+    border-radius: 20px;
+}
+
+.slide-container img {
+    border-radius: 20px;
+    width: 50%;
+    border: 2px solid white;
+}
+
+.custom-slider {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 0;
+    margin: 40px;
+    right: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: calc(0.6rem + 0.8vw);
+    font-weight: bold;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.6s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--primary);
+}
+
+.slide-text {
+    position: absolute;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
+    padding: 15px;
+    margin-left: 15px;
+    width: 40%;
+    text-align: center;
+    top: 80px;
+}
+
+.slide-text h2 {
+    margin-bottom: 40px;
+}
+
+.slide-img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    object-position: center;
+    margin: 20px;
+    position: absolute;
+    right: 20px;
+}
+
+.slide-dot{ 
+    text-align: center; 
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #fdf2e9;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slide-dot .active, .dot:hover { 
+    background-color: #111111; 
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+
+/* Section Map */
+
+#map {
+    margin: 50px 0;
+}
+
+#map div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#map #google-map #title-google-map h3 {
+    margin-bottom: 20px;
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
+}
+
+iframe {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#map #descriptif {
+    padding: 10px;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: calc(0.6rem + 0.8vw);
+}
+
+#map #descriptif h3 {
+    font-family: "Inknut Antiqua", sans-serif;
+    margin-bottom: 15px;
+}
+
+#map #descriptif p {
+    text-align: justify;
+}
+
+/* Image de transition */
+
+#img-transition {
+    background-image: url('../assets/Img_Accueil/Transition.png');
+    background-size: cover;
+    background-position: center;
+    display: block;
+    padding: 5%;
+    height: 5%;
+}
+
+
+/* Section Au coeur de la cité */
+
+#CoeurCite {
+    background-color: #28180a;
+    padding: 5%;
+}
+
+#CoeurCite p {
+    position: relative;
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1rem + 1.2vw);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.container .line {
+    flex-grow: 1;
+    height: 1px; 
+    background-color: #ffffff; 
+    margin-left: 20px; 
+}
+
+#CoeurCite #set-images {
+    background-image: url("../assets/Img_Accueil/Set_img.png");
+    background-position: center;
+    background-size: cover;
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 30px;
+}
+
+
+/* Section Infos pratiques */
+
+#infos-pratiques {
+    padding: 3%;
+}
+
+#infos-pratiques p {
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.8rem + 1vw);
+}
+
+#infos-pratiques .line {
+    background-color: black; 
+}
+
+#infos-pratiques #container-infos-pratiques{
+    display: flex;
+    justify-content: space-around;
+}
+
+#infos-pratiques table {
+    margin-top: 20px;
+}
+
+#infos-pratiques table a {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.6rem + 0.6vw);
+    font-weight: bold; 
+}
+
+#infos-pratiques table a:hover i {
+    transform: translate(1vw);
+    transition: 0.3s;
+}
+
+#infos-pratiques table a i {
+    font-size: 1vw;
+    transition: 0.3s;
+}
+
+#infos-pratiques img{
+    max-width: 0;
+    min-width: 350px;
+    display: block;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 700px) {
+
+    #title p {
+        font-size: 4vw;
+    }
+
+    button {
+        padding: 0.3rem;
+        font-size: 2vw;
+    }
+
+    #carrousel #title-map p {
+        font-size: 3.5vw;
+    }
+
+     .custom-slider {
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .slide-text{
+        top: 20px;
+        width: 90%;
+        position: relative;
+    }
+
+    .slide-img{
+        left: 20%;
+        position: relative;
+    }
+
+    .navigation{
+        right: 10%;
+        width: 90%;
+        position: relative;
+    }
+
+    .slide-container{
+        
+        height: 100%;
+    }
+    
+    
+    #CoeurCite #set-images {
+        height: 25rem;
+    }
+
+    #CoeurCite #title-coeurcite p {
+        font-size: 2.5vw;
+    }
+
+    #infos-pratiques p {
+        font-size: 3.5vw;
+    }
+
+    #infos-pratiques table a {
+        font-size: 4vw;
+        color: #ffffff;
+    }
+
+    #infos-pratiques table a i {
+        font-size: 4vw;
+    }
+
+    #infos-pratiques #container-infos-pratiques {
+        position: relative; /* Ajoutez cette ligne pour que le pseudo-élément soit positionné par rapport au conteneur */
+        flex-direction: column;
+        background-image: url('../assets/Img_Accueil/Infos_pratiques.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 10%;
+        border-radius: 2%;
+        z-index: 1; /* Pour que le contenu du conteneur soit au-dessus du pseudo-élément */
+    }
+    
+    #infos-pratiques #container-infos-pratiques::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit; /* Utilise la même image de fond */
+        filter: brightness(50%);
+        z-index: -1; /* Positionne le pseudo-élément derrière le contenu du conteneur */
+        border-radius: 2%; /* Applique le même rayon de bordure */
+    }
+    
+    #infos-pratiques #container-infos-pratiques img {
+        min-width: 250px;
+    }
+    
+    #infos-pratiques img {
+        display: none;
+    }
+
+    
+}

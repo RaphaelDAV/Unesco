@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
+:root {
+    --primary: #28180A;
+    --background: #191919;
+    --slider: rgba(252, 191, 80, 0.877);
+    --navbar-height: 80px;
+}
+
+/* Body */
+
+body {
+    margin-top: var(--navbar-height);
+    background-color: #fdf2e9;
+}
+
+/* Boutons */
+
+button {
+    display: inline-block;
+    background-color: #7E603B;
+    border-radius: 20px;
+    color: white;
+    width: 150px;
+    border: 1px solid white;
+    position: relative;
+    font-weight: 2;
+    font-family: "Krona One", sans-serif;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: #28180A;
+}
+
+/* Section Monuments */
+
+.section_monument {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #28180A;
+}
+
+.section_monument .container .line {
+    background-color: #ffffff; 
+}
+
+.titre1 {
+    color: #fdf2e9;
+    padding: 5%;
+}
+
+.titre1 p {
+    margin-left: 5%;
+    position: relative;
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1rem + 1.2vw);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    width: 90%;
+}
+
+.container .line {
+    flex-grow: 1;
+    height: 1px; 
+    margin-left: 10px; 
+}
+
+.row_monument {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.monument {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+    max-width: 400px;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.monument:nth-child(even) {
+    flex-direction: column-reverse;
+}
+
+.monument img {
+    max-width: 390px;
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.monument:hover img {
+    filter: brightness(25%); 
+    transform: scale(0.99);
+}
+
+.monument:nth-child(even) img {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.monument-content {
+    position: relative;
+    padding: 10px;
+    background-color: #ffffff;
+    width: 100%;
+    max-height: 450px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.monument-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #7E603B;
+    font-family: "Krona One", sans-serif;
+}
+
+.monument-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: justify;
+    font-family: "Inknut Antiqua", sans-serif;
+}
+
+.monument-content::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    color: #ffffff;
+    padding: 10px;
+    text-align: justify;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+    font-family: "Krona One", sans-serif;
+    font-size: 1em;
+}
+
+.monument:hover .monument-content::before {
+    opacity: 1;
+}
+
+/* Image de transition */
+
+#img-transition {
+    background-image: url('../assets/Img_Histoire/transition.jpg');
+    background-size: cover;
+    background-position: center;
+    display: block;
+    padding: 10%;
+}
+
+/* Urbanisme et patrimoine */
+
+.urbanism {
+    background-color: #fdf2e9;
+}
+
+.urbanism .container {
+    color: #28180A;
+    padding: 5%;
+}
+
+.urbanism .container p {
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1rem + 1.2vw);
+}
+
+.urbanism .container .line {
+    background-color: #28180A;
+    margin-left: 20px;
+}
+
+.cadre {
+    color: #fdf2e9;
+    background-color: #28180A;
+    border: 7px solid #7E603B;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: justify;
+    margin-top: -5%;
+    margin-bottom: 10%;
+}
+
+.texte {
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
+}
+
+.texte p {
+    font-size: 1.5vw;
+}
+
+#moreText {
+    display: none;
+    font-size: 1.5vw;
+}
+
+#moreText2 {
+    display: none;
+    font-size: 1.5vw;
+}
+
+#lirePlusBtnContainer {
+    text-align: center; 
+}
+
+.lirePlusBtn {
+    border: 1px solid #fdf2e9;
+    background-color: #7E603B;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.lirePlusBtn:hover {
+    background-color: #181009;
+}
+
+/* A lire aussi */
+
+.A_lire {
+    background-color: #181009;
+}
+
+.titre2 {
+    color: #fdf2e9;
+    padding: 5%;
+}
+
+.A_lire .container .line {
+    background-color: #ffffff;
+}
+
+.titre2 p {
+    font-family: "Krona One", sans-serif;
+    font-size: calc(1rem + 1.2vw);
+}
+
+/* Section Carrousel */
+
+#carrousel #title-map p {
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+custom-slider {
+    display: flex;
+    flex-direction: row;
+}
+
+.slide-container {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin: 10%;
+    margin-top: 0%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.6s ease;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slide-text {
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px;
+    bottom: 10;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-left: 110%;
+    margin-top: -50%;
+    border-radius: 10px;
+    border: solid;
+    border-width: 5px;
+    border-color: #7E603B;
+    background: #28180A;
+}
+
+.slide-text h2 {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
+    line-height: 30px;
+}
+
+.slide-text p {
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.4rem + 0.6vw);
+}
+
+.slide-index {
+    color: #ffffff;
+    font-size: 13px;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+}
+
+.slide-img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide-dot {
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #999999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slide-dot .active, .dot:hover {
+    background-color: #fdf2e9;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 700px) {
+
+
+    .titre1 p,
+    .urbanism .container p,
+    .titre2 p,
+    #carrousel #title-map p {
+        font-size: 5vw;
+    }
+
+
+    .monument-title {
+        font-size: 3vw;
+    }
+    .monument-content::before{
+        top: 10%;
+        font-size: 1.5vw;
+    }
+
+    .monument-description {
+        font-size: 2.5vw;
+    }
+
+    .texte p,
+    #moreText,
+    #moreText2 {
+        font-size: 3vw;
+    }
+
+    .cadre {
+        width: 90%;
+        padding: 10px;
+        font-size: 1vw;
+    }
+
+    .slide-text {
+        margin-top:-60% ;
+        font-size: 3vw;
+        width: 75%;
+        margin-left: 100%;
+    }
+
+    .slide-text p {
+        font-size: 3vw;
+    }
+}

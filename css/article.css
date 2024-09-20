@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Italiana&family=Krona+One&display=swap');
+
+:root {
+    --primary: #28180A;
+    --background: #191919;
+    --slider: rgba(252, 191, 80, 0.877);
+    --navbar-height: 80px;
+}
+
+/* Body */
+
+body {
+    margin-top: var(--navbar-height);
+    background-color: #fdf2e9;
+}
+
+
+/* Boutons */
+
+button {
+    display: inline-block;
+    background-color: #7E603B;
+    border-radius: 20px;
+    color: white;
+    width: 150px;
+    border: 1px solid white;
+    position: relative;
+    font-weight: 2;
+    padding: 0.4rem;
+}
+
+button:hover {
+    transition: 0.2s;
+    background-color: #28180A;
+}
+
+
+/* Section article */
+
+.bg-article {
+    background-image: url(../assets/Img_Article/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.article {
+    background-color: #fdf2e9;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 40px;
+}
+
+.header-article {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-article div {
+    margin: 20px;
+}
+
+.title {
+    font-size: 3vw;
+    font-weight: bold;
+    padding-top: 20px;
+    font-family: "Krona One", sans-serif;
+    
+}
+
+.img-article img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content-article {
+    text-align: justify;
+    margin: 3%;
+    margin-bottom: 0;
+    padding-bottom: 40px;
+}
+
+.content-article h1 {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: calc(1.5rem + 1.5vw);
+    color: #7E603B;
+}
+
+.content-article h2 {
+    font-family: "Krona One", sans-serif;
+    font-size: calc(0.8rem + 0.8vw);
+    padding-bottom: 10px;
+}
+
+.content-article *:not(h1, h2, li) {
+    font-family: "Inter", sans-serif;
+    font-size: calc(0.6rem + 0.8vw);
+    padding-bottom: 20px;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 700px) {
+
+    body {
+        padding-top: 80px;
+    }
+
+    button {
+        width: 70px;
+        padding: 0.3rem;
+        font-size: 2vw;
+    }
+}
